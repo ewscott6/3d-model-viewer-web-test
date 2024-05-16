@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <title>Dynamic 3D Model Display</title>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="box">
+        <h2>3D MODEL</h2>
+    
+        <h3>Number of Connections</h3>
+        <label for="connectionsSelect">Choose a number:</label>
+        <select name="connections" id="connectionsSelect">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+         
+        <!-- Model Viewer -->
+        <model-viewer id="modelViewer" alt="3D Model" src="" auto-rotate shadow-intensity="2" camera-controls style="width: 70%; height: 600px; margin: 50px; padding: 10px;" ></model-viewer>
+        <!-- Buttons for loading different models -->
+        <button id="b1" onclick="loadModel(1)">Load Model 1</button>
+        <button id="b2" onclick="loadModel(2)">Load Model 2</button>
+        <button id="b3" onclick="loadModel(3)">Load Model 3</button>
+    </div>
+    
+
+    <script>
+        async function loadModel(partId) {
+            try {
+                const response = await fetch(`/api/models/${partId}`);
+                if (!response.ok) {
+                    throw new Error('Model not found');
+                }
+                const modelPath = await response.text();
+                const viewer = document.querySelector('#modelViewer');
+                viewer.src = modelPath;
+            } catch (error) {
+                console.error('Failed to load model:', error);
+            }
+        }
+        
+        loadModel(3); // Example: Load the model for part with ID 1
+         // Assuming '1' is the ID of the part you want to load. Adjust as necessary.
+    </script>
+    
+    
+      
+
+
+    <!-- Button to download the 3D model -->
+    <button id="convertBtn">DOWNLOAD .STEP</button>
+    <script src="script.js"></script>
+    
+
+    
+</body>
+</html>

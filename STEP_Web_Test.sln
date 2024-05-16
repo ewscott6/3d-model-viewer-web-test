@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0B68C648-E0F8-4966-AE99-70120CCA3DE8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csharp", "csharp", "{F4C64EDB-7CEA-4E94-B846-12F8725E0870}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConverterApp", "src\csharp\ConverterApp\ConverterApp.csproj", "{65827258-394C-49A3-8933-77C1AAA81A1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65827258-394C-49A3-8933-77C1AAA81A1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65827258-394C-49A3-8933-77C1AAA81A1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65827258-394C-49A3-8933-77C1AAA81A1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65827258-394C-49A3-8933-77C1AAA81A1E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F4C64EDB-7CEA-4E94-B846-12F8725E0870} = {0B68C648-E0F8-4966-AE99-70120CCA3DE8}
+		{65827258-394C-49A3-8933-77C1AAA81A1E} = {F4C64EDB-7CEA-4E94-B846-12F8725E0870}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B34D02D8-A181-420B-9C50-D2A1A8C3CF13}
+	EndGlobalSection
+EndGlobal

@@ -1,6 +1,3 @@
-Here is a `README.md` file for your project:
-
-
 # Dynamic 3D Model Display and Conversion
 
 This project is a web application that allows users to dynamically display 3D models and convert files from `.ipt` format to `.STEP` format. It uses Node.js, Express, and a simple frontend setup to achieve this functionality.
